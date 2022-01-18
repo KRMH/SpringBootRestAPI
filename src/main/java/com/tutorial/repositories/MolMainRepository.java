@@ -10,5 +10,4 @@ import com.tutorial.models.MolMain;
 @Repository
 public interface MolMainRepository extends JpaRepository<MolMain, Long>{
 	List<MolMain> findBySiteId(Long siteId);
-
 }

@@ -28,8 +28,8 @@ public class MolMain {
 	@Column(name="order_id")
 	private Long orderId;
 	
-	@Column(name="description_1")
-	private String description1;
+//	@Column(name="description_1")
+//	private String description1;
 	
 	@Column(name="planned_quantity")
 	private Long plannedQuantity;
@@ -43,11 +43,11 @@ public class MolMain {
 	@Column(name="initial_planned_value")
 	private Long initialPlannedValue;
 	
-	@Column(name="planned_availability_date")
-	private Timestamp plannedAvailDate;
+//	@Column(name="planned_availability_date")
+//	private Timestamp plannedAvailDate;
 	
-	@Column(name="minimum_order_quantity")
-	private Long minOrderQuantity;
+//	@Column(name="minimum_order_quantity")
+//	private Long minOrderQuantity;
 	
 	@Column(name="stock_quantity")
 	private Long stockQuantity;
@@ -55,8 +55,8 @@ public class MolMain {
 	@Column(name="safety_stock")
 	private Long safetyStock;
 	
-	@Column(name="max_maximum_stock")
-	private Long maxMaxStock;
+//	@Column(name="max_maximum_stock")
+//	private Long maxMaxStock;
 	
 	@Column(name="category_family")
 	private String categoryFamily;
@@ -76,11 +76,11 @@ public class MolMain {
 	@Column(name="supplier_variant_code_desc")
 	private String supplierVariantCodeDesc;
 	
-	@Column(name="product_group")
-	private String productGrp;
+//	@Column(name="product_group")
+//	private String productGrp;
 	
-	@Column(name="product_group_facing")
-	private String productGrpFacing;
+//	@Column(name="product_group_facing")
+//	private String productGrpFacing;
 	
 	@Column(name="abc_category")
 	private String abcCategory;
@@ -88,11 +88,11 @@ public class MolMain {
 	@Column(name="sales_price")
 	private Long salesPrice;
 	
-	@Column(name="category_full_name")
-	private String categFullName;
+//	@Column(name="category_full_name")
+//	private String categFullName;
 	
-	@Column(name="calculation_price")
-	private Long calcPrice;
+//	@Column(name="calculation_price")
+//	private Long calcPrice;
 	
 	@Column(name="is_validated")
 	private int isValidated;
@@ -127,8 +127,8 @@ public class MolMain {
 	@Column(name="supplier_id")
 	private Long supplierId;
 	
-	@Column(name="category_level_name")
-	private String catLevelName;
+//	@Column(name="category_level_name")
+//	private String catLevelName;
 	
 	@Column(name="master_product_code_desc")
 	private String masterProductCodeDesc;
@@ -157,8 +157,8 @@ public class MolMain {
 	@Column(name="supplier_variant_name")
 	private String supplierVariantName;
 	
-	@Column(name="outbound_sold_quantity")
-	private Long outboundSoldQty;
+//	@Column(name="outbound_sold_quantity")
+//	private Long outboundSoldQty;
 	
 	@Column(name="outbound_unsold_quantity_list")
 	private String outboundUnsoldQtyList;
@@ -239,14 +239,6 @@ public class MolMain {
 		this.orderId = orderId;
 	}
 
-	public String getDescription1() {
-		return description1;
-	}
-
-	public void setDescription1(String description1) {
-		this.description1 = description1;
-	}
-
 	public Long getPlannedQuantity() {
 		return plannedQuantity;
 	}
@@ -279,22 +271,6 @@ public class MolMain {
 		this.initialPlannedValue = initialPlannedValue;
 	}
 
-	public Timestamp getPlannedAvailDate() {
-		return plannedAvailDate;
-	}
-
-	public void setPlannedAvailDate(Timestamp plannedAvailDate) {
-		this.plannedAvailDate = plannedAvailDate;
-	}
-
-	public Long getMinOrderQuantity() {
-		return minOrderQuantity;
-	}
-
-	public void setMinOrderQuantity(Long minOrderQuantity) {
-		this.minOrderQuantity = minOrderQuantity;
-	}
-
 	public Long getStockQuantity() {
 		return stockQuantity;
 	}
@@ -309,14 +285,6 @@ public class MolMain {
 
 	public void setSafetyStock(Long safetyStock) {
 		this.safetyStock = safetyStock;
-	}
-
-	public Long getMaxMaxStock() {
-		return maxMaxStock;
-	}
-
-	public void setMaxMaxStock(Long maxMaxStock) {
-		this.maxMaxStock = maxMaxStock;
 	}
 
 	public String getCategoryFamily() {
@@ -367,22 +335,6 @@ public class MolMain {
 		this.supplierVariantCodeDesc = supplierVariantCodeDesc;
 	}
 
-	public String getProductGrp() {
-		return productGrp;
-	}
-
-	public void setProductGrp(String productGrp) {
-		this.productGrp = productGrp;
-	}
-
-	public String getProductGrpFacing() {
-		return productGrpFacing;
-	}
-
-	public void setProductGrpFacing(String productGrpFacing) {
-		this.productGrpFacing = productGrpFacing;
-	}
-
 	public String getAbcCategory() {
 		return abcCategory;
 	}
@@ -397,22 +349,6 @@ public class MolMain {
 
 	public void setSalesPrice(Long salesPrice) {
 		this.salesPrice = salesPrice;
-	}
-
-	public String getCategFullName() {
-		return categFullName;
-	}
-
-	public void setCategFullName(String categFullName) {
-		this.categFullName = categFullName;
-	}
-
-	public Long getCalcPrice() {
-		return calcPrice;
-	}
-
-	public void setCalcPrice(Long calcPrice) {
-		this.calcPrice = calcPrice;
 	}
 
 	public int getIsValidated() {
@@ -503,14 +439,6 @@ public class MolMain {
 		this.supplierId = supplierId;
 	}
 
-	public String getCatLevelName() {
-		return catLevelName;
-	}
-
-	public void setCatLevelName(String catLevelName) {
-		this.catLevelName = catLevelName;
-	}
-
 	public String getMasterProductCodeDesc() {
 		return masterProductCodeDesc;
 	}
@@ -581,14 +509,6 @@ public class MolMain {
 
 	public void setSupplierVariantName(String supplierVariantName) {
 		this.supplierVariantName = supplierVariantName;
-	}
-
-	public Long getOutboundSoldQty() {
-		return outboundSoldQty;
-	}
-
-	public void setOutboundSoldQty(Long outboundSoldQty) {
-		this.outboundSoldQty = outboundSoldQty;
 	}
 
 	public String getOutboundUnsoldQtyList() {

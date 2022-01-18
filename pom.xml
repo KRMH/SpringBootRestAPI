@@ -9,12 +9,12 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tutorial</groupId>
-	<artifactId>SpringBootRestAPI</artifactId>
+	<artifactId>SpringBootRestAPI17</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootRestAPI</name>
+	<name>SpringBootRestAPI17</name>
 	<description>Demo project connecting Oracle Database with Spring Data JPa</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -26,6 +26,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
