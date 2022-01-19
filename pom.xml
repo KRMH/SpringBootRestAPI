@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tutorial</groupId>
-	<artifactId>SpringBootRestAPI17</artifactId>
+	<artifactId>SpringBootRestAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootRestAPI17</name>
+	<name>SpringBootRestAPI</name>
 	<description>Demo project connecting Oracle Database with Spring Data JPa</description>
 	<properties>
 		<java.version>17</java.version>
