@@ -2,6 +2,8 @@ package com.tutorial.controllers;
 
 import java.util.List;
 
+import javax.persistence.EntityGraph;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -29,7 +31,7 @@ public class MolMainController {
 	@ResponseBody
 	public ResponseEntity<List<MolMain>> all(){
 		logger.debug("start of getAll");
-		logger.error("error in getAll");
+		//logger.error("error in getAll");
 		
 		List <MolMain> molMain = molMainRepo.findAll();
 		if (molMain == null) {
@@ -44,7 +46,6 @@ public class MolMainController {
 	@GetMapping ("/orderLines/{siteId}")
 	@ResponseBody
 	public ResponseEntity<List<MolMain>> getMolMain (@PathVariable("siteId") Long siteId) {
-		
 		List <MolMain> molMain = molMainRepo.findBySiteId(siteId);
 		return new ResponseEntity <> (molMain, HttpStatus.OK);
 		

@@ -2,18 +2,34 @@ package com.tutorial.models;
 
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.NamedAttributeNode;
 
 @Entity
 @Table(name = "MOL_MAIN_VO")
+//@NamedEntityGraph(name = "graph.Order.fcOrderLineAlert", 
+//				  attributeNodes = @NamedAttributeNode("fcOrderLineAlert"))
 public class MolMain {
 
 	@Id
 	@Column(name="ID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	@Column(name="ARTICLE_ID")
@@ -198,6 +214,17 @@ public class MolMain {
 	
 	@Column(name="alert_susp_icon")
 	private String alertSuspIcon;
+	
+	//@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	//@JoinColumn(name="orderLineId", referencedColumnName = "id")
+	//@OneToMany(fetch = FetchType.LAZY)
+	//@JoinColumn(name="orderLineId", referencedColumnName = "id")
+	@JsonManagedReference
+	@OneToMany(fetch = FetchType.LAZY,
+			mappedBy = "molMain",
+			cascade = CascadeType.ALL,
+			orphanRemoval = true)
+	private List<FcOrderLineAlert> fcOrderLineAlert = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -614,6 +641,13 @@ public class MolMain {
 	public void setAlertSuspIcon(String alertSuspIcon) {
 		this.alertSuspIcon = alertSuspIcon;
 	}
-	
+
+	public List<FcOrderLineAlert> getFcOrderLineAlert() {
+		return fcOrderLineAlert;
+	}
+
+	public void setFcOrderLineAlert(List<FcOrderLineAlert> fcOrderLineAlert) {
+		this.fcOrderLineAlert = fcOrderLineAlert;
+	}
 	
 }
