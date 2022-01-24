@@ -14,7 +14,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.NamedEntityGraph;
+import javax.persistence.NamedStoredProcedureQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.ParameterMode;
+import javax.persistence.StoredProcedureParameter;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -23,8 +26,15 @@ import javax.persistence.NamedAttributeNode;
 
 @Entity
 @Table(name = "MOL_MAIN_VO")
-//@NamedEntityGraph(name = "graph.Order.fcOrderLineAlert", 
-//				  attributeNodes = @NamedAttributeNode("fcOrderLineAlert"))
+@NamedStoredProcedureQuery(
+		name = "getId",
+		procedureName = "p$fps_ui.get_order_id",
+		parameters = {
+				@StoredProcedureParameter( mode = ParameterMode.IN,  type = Long.class, name = "p_order_line_id"),
+				@StoredProcedureParameter( mode = ParameterMode.OUT,  type = Long.class, name = "p_order_id"),
+				@StoredProcedureParameter( mode = ParameterMode.OUT,  type = String.class, name = "p_grouping_criterion")
+		})
+
 public class MolMain {
 
 	@Id
